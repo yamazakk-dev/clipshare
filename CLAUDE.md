@@ -8,6 +8,8 @@ ClipShare は、Mac と Android のテキストクリップボードを同一 LA
 - `android/`: Android アプリ（今後実装）
 - `docs/superpowers/`: 設計書と実装計画
 
+既知の制限: Android の JVM ユニットテストは Maven 版 `org.json`、実機は Android framework 版を使用するため、パーサーの境界挙動が異なる可能性があります。
+
 ## Mac のビルドとテスト
 
 ```sh
