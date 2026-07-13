@@ -20,4 +20,19 @@
     <string name="notification_channel_name">クリップボード同期</string>
     <string name="notification_connected">Macに接続済み</string>
     <string name="notification_waiting">Macへの接続を待機中</string>
+    <string name="tile_label">クリップを送信</string>
+    <string name="tile_connected_label">ClipShare 接続済み</string>
+    <string name="tile_sending_label">クリップを取得中</string>
+    <string name="tile_sent">クリップボードを送信しました</string>
+    <string name="tile_queued">接続待ちの送信データとして保持しました</string>
+    <string name="tile_focus_unavailable">クリップボードを読み取る画面を開けませんでした</string>
+    <string name="tile_clipboard_empty">送信できるテキストがクリップボードにありません</string>
+    <string name="tile_token_missing">ClipShare のトークンを設定してください</string>
+    <string name="tile_send_failed">クリップボードを送信できませんでした</string>
+    <string name="share_target_label">ClipShareへ送信</string>
+    <string name="share_sent">テキストを送信しました</string>
+    <string name="share_queued">接続待ちの送信データとして保持しました</string>
+    <string name="share_text_missing">共有されたテキストがありません</string>
+    <string name="share_token_missing">ClipShare のトークンを設定してください</string>
+    <string name="share_send_failed">テキストを送信できませんでした</string>
 </resources>
