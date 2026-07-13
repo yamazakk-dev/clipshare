@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ClipShare</string>
+    <string name="connection_label">接続状態</string>
+    <string name="connection_stopped">停止中</string>
+    <string name="connection_waiting">接続待機中</string>
+    <string name="connection_connected">接続済み</string>
+    <string name="host_hint">Mac ホスト名</string>
+    <string name="port_hint">ポート</string>
+    <string name="token_hint">ペアリングトークン</string>
+    <string name="save_settings">設定を保存</string>
+    <string name="start_service">同期サービスを開始</string>
+    <string name="stop_service">同期サービスを停止</string>
+    <string name="open_battery_settings">バッテリー最適化の設定を開く</string>
+    <string name="settings_saved">設定を保存しました</string>
+    <string name="error_host_required">ホスト名を入力してください</string>
+    <string name="error_invalid_port">1〜65535のポートを入力してください</string>
+    <string name="error_token_required">トークンを入力してください</string>
+    <string name="battery_settings_unavailable">バッテリー設定を開けませんでした</string>
+    <string name="notification_channel_name">クリップボード同期</string>
+    <string name="notification_connected">Macに接続済み</string>
+    <string name="notification_waiting">Macへの接続を待機中</string>
+</resources>
