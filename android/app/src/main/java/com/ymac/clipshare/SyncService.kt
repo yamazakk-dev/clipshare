@@ -372,7 +372,11 @@ class SyncService : Service() {
     }
 
     private fun buildNotification(isConnected: Boolean): Notification {
-        val settingsIntent = Intent(this, SettingsActivity::class.java)
+        val settingsIntent = Intent(this, SettingsActivity::class.java).apply {
+            flags = Intent.FLAG_ACTIVITY_NEW_TASK or
+                Intent.FLAG_ACTIVITY_CLEAR_TOP or
+                Intent.FLAG_ACTIVITY_SINGLE_TOP
+        }
         val pendingIntent = PendingIntent.getActivity(
             this,
             0,
