@@ -6,7 +6,7 @@
     <string>com.ymac.clipshare</string>
     <key>ProgramArguments</key>
     <array>
-        <string>/Users/ymac/develop/develop-tools/clipshare/mac/.build/release/clipshare-mac</string>
+        <string>/path/to/clipshare/mac/.build/release/clipshare-mac</string>
     </array>
     <key>RunAtLoad</key>
     <true/>

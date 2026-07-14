@@ -5,7 +5,7 @@ ClipShare は、Mac と Android のテキストクリップボードを同一 LA
 ## 構成
 
 - `mac/`: SwiftPM 製の Mac アプリと共通プロトコル層
-- `android/`: Android アプリ（今後実装）
+- `android/`: Android アプリ
 - `docs/superpowers/`: 設計書と実装計画
 
 既知の制限: Android の JVM ユニットテストは Maven 版 `org.json`、実機は Android framework 版を使用するため、パーサーの境界挙動が異なる可能性があります。
@@ -32,11 +32,12 @@ swift run clipshare-mac
 
 ## launchd へ登録
 
-`mac/com.ymac.clipshare.plist` は `$HOME/develop/develop-tools/clipshare` に配置したリポジトリ向けです。リポジトリを移動した場合は、plist の実行ファイルパスも変更してください。
+`mac/com.ymac.clipshare.plist` の `ProgramArguments` には `/path/to/clipshare` というプレースホルダーが入っています。**LaunchAgentsへコピーする前に**、自分のクローン先ディレクトリの絶対パスへ書き換えてください。リポジトリを移動した場合も同様に更新して再登録します。
 
 ```sh
 cd mac
 swift build -c release
+# com.ymac.clipshare.plist の /path/to/clipshare を実際のクローン先へ書き換える
 mkdir -p "$HOME/Library/LaunchAgents"
 cp com.ymac.clipshare.plist "$HOME/Library/LaunchAgents/com.ymac.clipshare.plist"
 launchctl bootout "gui/$(id -u)" "$HOME/Library/LaunchAgents/com.ymac.clipshare.plist" 2>/dev/null || true

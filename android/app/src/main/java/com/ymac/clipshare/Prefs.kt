@@ -8,9 +8,7 @@ class Prefs(context: Context) {
         context.applicationContext.getSharedPreferences(FILE_NAME, Context.MODE_PRIVATE)
 
     var host: String
-        get() = preferences.getString(KEY_HOST, DEFAULT_HOST)
-            ?.takeIf { it.isNotBlank() }
-            ?: DEFAULT_HOST
+        get() = preferences.getString(KEY_HOST, DEFAULT_HOST).orEmpty()
         set(value) {
             preferences.edit().putString(KEY_HOST, value.trim()).apply()
         }
@@ -51,7 +49,7 @@ class Prefs(context: Context) {
         const val KEY_PORT = "port"
         const val KEY_TOKEN = "token"
         const val KEY_SERVICE_ENABLED = "service_enabled"
-        const val DEFAULT_HOST = "ymac"
+        const val DEFAULT_HOST = ""
         const val DEFAULT_PORT = 4747
         const val MAX_PORT = 65_535
     }
