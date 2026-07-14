@@ -9,3 +9,6 @@
 build/
 local.properties
 .gradle/
+
+# 開発内部ドキュメント（非公開）
+docs/superpowers/
